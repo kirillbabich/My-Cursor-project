@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Gallery Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-gallery { display: flex; flex-wrap: wrap; gap: 10px; }
+        .test-gallery img { width: 200px; height: 150px; object-fit: cover; border: 2px solid #ddd; }
+        .status { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Simple Gallery Test</h1>
+    <p>This tests if your images can be loaded directly:</p>
+    
+    <div class="test-gallery">
+        <div>
+            <img src="images/gallery/photo1.jpg" alt="Death Valley">
+            <p>photo1.jpg - Death Valley</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo2.jpg" alt="Shanghai Wharton trip">
+            <p>photo2.jpg - Shanghai Wharton trip</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo3.jpg" alt="China Xiaomi HQ">
+            <p>photo3.jpg - China Xiaomi HQ</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo4.jpg" alt="Great Wall">
+            <p>photo4.jpg - Great Wall</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo5.jpg" alt="Italy trip">
+            <p>photo5.jpg - Italy trip</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo6.jpg" alt="Skiing at Palisades">
+            <p>photo6.jpg - Skiing at Palisades</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo7.jpg" alt="Family trip to Mexico">
+            <p>photo7.jpg - Family trip to Mexico</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo8.jpg" alt="Great moments with Stu West">
+            <p>photo8.jpg - Great moments with Stu West</p>
+        </div>
+        <div>
+            <img src="images/gallery/photo9.jpg" alt="Grammarly team">
+            <p>photo9.jpg - Grammarly team</p>
+        </div>
+    </div>
+
+    <h2>Profile Image Test</h2>
+    <div>
+        <img src="images/headshot/profile.jpg" alt="Profile" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <p>profile.jpg</p>
+    </div>
+
+    <script>
+        // Test gallery JavaScript elements
+        console.log('Testing gallery elements...');
+        
+        // Simulate the gallery initialization
+        setTimeout(() => {
+            console.log('Gallery track element:', document.getElementById('galleryTrack'));
+            console.log('Pause button element:', document.getElementById('pauseBtn'));
+            console.log('Indicators element:', document.getElementById('galleryIndicators'));
+        }, 1000);
+    </script>
+</body>
+</html>

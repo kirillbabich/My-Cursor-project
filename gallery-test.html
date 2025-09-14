@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-info { background: #f0f0f0; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .image-test { margin: 10px 0; }
+        .image-test img { max-width: 200px; height: 150px; object-fit: cover; margin: 5px; border: 1px solid #ccc; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Gallery Debug Test</h1>
+    
+    <div class="debug-info">
+        <h2>Gallery Directory Status</h2>
+        <p>This page will help you debug why images aren't showing in your gallery.</p>
+    </div>
+
+    <div class="debug-info">
+        <h2>Expected Image Paths</h2>
+        <p>Your gallery is looking for these images:</p>
+        <div class="image-test">
+            <h3>Testing image loading:</h3>
+            <img src="images/gallery/photo1.jpg" alt="Death Valley" onerror="this.nextSibling.innerHTML='❌ photo1.jpg (Death Valley) not found'" onload="this.nextSibling.innerHTML='✅ photo1.jpg (Death Valley) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo2.jpg" alt="Shanghai Wharton trip" onerror="this.nextSibling.innerHTML='❌ photo2.jpg (Shanghai Wharton trip) not found'" onload="this.nextSibling.innerHTML='✅ photo2.jpg (Shanghai Wharton trip) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo3.jpg" alt="China Xiaomi HQ" onerror="this.nextSibling.innerHTML='❌ photo3.jpg (China Xiaomi HQ) not found'" onload="this.nextSibling.innerHTML='✅ photo3.jpg (China Xiaomi HQ) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo4.jpg" alt="Great Wall" onerror="this.nextSibling.innerHTML='❌ photo4.jpg (Great Wall) not found'" onload="this.nextSibling.innerHTML='✅ photo4.jpg (Great Wall) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo5.jpg" alt="Italy trip" onerror="this.nextSibling.innerHTML='❌ photo5.jpg (Italy trip) not found'" onload="this.nextSibling.innerHTML='✅ photo5.jpg (Italy trip) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo6.jpg" alt="Skiing at Palisades" onerror="this.nextSibling.innerHTML='❌ photo6.jpg (Skiing at Palisades) not found'" onload="this.nextSibling.innerHTML='✅ photo6.jpg (Skiing at Palisades) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo7.jpg" alt="Family trip to Mexico" onerror="this.nextSibling.innerHTML='❌ photo7.jpg (Family trip to Mexico) not found'" onload="this.nextSibling.innerHTML='✅ photo7.jpg (Family trip to Mexico) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo8.jpg" alt="Great moments with Stu West" onerror="this.nextSibling.innerHTML='❌ photo8.jpg (Great moments with Stu West) not found'" onload="this.nextSibling.innerHTML='✅ photo8.jpg (Great moments with Stu West) loaded'"><span class="status">Loading...</span><br>
+            <img src="images/gallery/photo9.jpg" alt="Grammarly team" onerror="this.nextSibling.innerHTML='❌ photo9.jpg (Grammarly team) not found'" onload="this.nextSibling.innerHTML='✅ photo9.jpg (Grammarly team) loaded'"><span class="status">Loading...</span><br>
+        </div>
+        
+        <h3>Testing headshot image:</h3>
+        <div class="image-test">
+            <img src="images/headshot/profile.jpg" alt="Profile" onerror="this.nextSibling.innerHTML='❌ profile.jpg not found'" onload="this.nextSibling.innerHTML='✅ profile.jpg loaded'"><span class="status">Loading...</span><br>
+        </div>
+    </div>
+
+    <div class="debug-info">
+        <h2>Instructions to Fix</h2>
+        <ol>
+            <li><strong>Add your images</strong> to the <code>personal-website/images/gallery/</code> directory</li>
+            <li><strong>Name them exactly:</strong> photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg, photo5.jpg, photo6.jpg</li>
+            <li><strong>Check file extensions:</strong> Make sure they're .jpg (not .jpeg)</li>
+            <li><strong>Check file permissions:</strong> Make sure the files are readable</li>
+            <li><strong>Refresh your main page</strong> after adding the images</li>
+        </ol>
+    </div>
+
+    <div class="debug-info">
+        <h2>Gallery JavaScript Console</h2>
+        <p>Open your browser's developer tools (F12) and check the Console tab for any error messages when you load your main page.</p>
+    </div>
+
+    <script>
+        console.log('Gallery debug test loaded');
+        
+        // Test if gallery elements exist on main page
+        setTimeout(() => {
+            const galleryTrack = document.getElementById('galleryTrack');
+            const pauseBtn = document.getElementById('pauseBtn');
+            const indicators = document.getElementById('galleryIndicators');
+            
+            console.log('Gallery elements check:');
+            console.log('- galleryTrack:', galleryTrack ? 'Found' : 'Missing');
+            console.log('- pauseBtn:', pauseBtn ? 'Found' : 'Missing');
+            console.log('- indicators:', indicators ? 'Found' : 'Missing');
+        }, 1000);
+    </script>
+</body>
+</html>
