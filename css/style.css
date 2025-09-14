@@ -433,6 +433,10 @@ section {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+.timeline-content:hover h3 a {
+    pointer-events: auto;
+}
+
 .timeline-content h3 {
     color: #333;
     font-size: 1.4rem;
@@ -444,6 +448,9 @@ section {
     text-decoration: underline;
     font-weight: 600;
     transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 .timeline-content h3 a:hover {
