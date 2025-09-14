@@ -439,6 +439,18 @@ section {
     margin-bottom: 0.5rem;
 }
 
+.timeline-content h3 a {
+    color: #667eea;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.timeline-content h3 a:hover {
+    color: #764ba2;
+    text-decoration: none;
+}
+
 .timeline-content h4 {
     color: #667eea;
     font-size: 1.1rem;
